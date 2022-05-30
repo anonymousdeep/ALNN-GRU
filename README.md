@@ -1,5 +1,5 @@
 # ALNN-GRU
-Get MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/
+Get MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/ and put it in the data directory
 Run the py files in this order:
 	1-features_selection.py
 	2-remove_outliers.py
