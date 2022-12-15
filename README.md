@@ -16,4 +16,4 @@ To literally explain the coefficients of $X,T,M$ and $\Delta$ an example could b
 3. Run preprocessing.py to get the inputs and target features
 
 # Results 
-![](assets/nzamba10.jpg)
+![](assets/nzamba10.png)
