@@ -15,7 +15,8 @@ To literally explain the coefficients of $X,T,M$ and $\Delta$ an example could b
 2. Run features_selection.py for data selection
 2. Run remove_outliers.py to remove outliers and replace them by nan
 2. Run data_imputation.py to to impute outliers and initial missing values
-3. Run preprocessing.py to get the inputs and target features
+3. Run data_preparation.py to get the imput and target samples.
+3. Run train.py to train the model.
 
 # Results 
 ![](assets/nzamba10.png)
