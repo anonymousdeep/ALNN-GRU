@@ -8,11 +8,11 @@ To literally explain the coefficients of $X,T,M$ and $\Delta$ an example could b
 ![](assets/nzamba9.png)
 
 # Architecture
-![](assets/nzamba8.jpg)
+![](assets/architecture.jpg)
 
 # Steps to follow to launch the model
 1. Get the MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/ and place it in the data directory
-2. Run features_selection.py for data extraction
+2. Run remove_outliers.py to remove outliers and replace them by nan
 3. Run preprocessing.py to get the inputs and target features
 
 # Results 
