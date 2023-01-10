@@ -12,7 +12,9 @@ To literally explain the coefficients of $X,T,M$ and $\Delta$ an example could b
 
 # Steps to follow to launch the model
 1. Get the MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/ and place it in the data directory
+2. Run features_selection.py for data selection
 2. Run remove_outliers.py to remove outliers and replace them by nan
+2. Run data_imputation.py to to impute outliers and initial missing values
 3. Run preprocessing.py to get the inputs and target features
 
 # Results 
