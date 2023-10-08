@@ -11,12 +11,28 @@ To literally explain the coefficients of $X,T,M$ and $\Delta$ an example could b
 ![](assets/architecture.jpg)
 
 # Steps to follow to launch the model
-1. Get the MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/ and place it in the data directory
+1. Get the MIMIC-3 database from https://physionet.org/content/mimiciii/1.4/ and place it in the data directory 
 2. Run features_selection.py for data selection
-2. Run remove_outliers.py to remove outliers and replace them by nan
-2. Run data_imputation.py to to impute outliers and initial missing values
-3. Run data_preparation.py to get the imput and target samples.
-3. Run train.py to train the model.
+```
+python3 features_selection.py 
+```
+2. Run data_cleaning.py to replace outliers by nan. --prior-hours is in [24,48]
+```
+python3 data_cleaning.py --prior-hours 24
+```
+2. Run data_imputation.py to to impute outliers and initial missing values (i.e. not due to time irregularity).
+```
+python3 data_cleaning.py --prior-hours 24
+```
+3. Run samples_preparation.py to get the imput and target samples.
+```
+python3 samples_preparation.py --prior-hours 24
+```
+3. Run train.py to train the model. The time-ref-parameter set the reference time point vector. If: time-ref-parameter=1, Δr=1./time-ref-parameter=2, Δr=0.5/time-ref-parameter=3, Δr=0.33/time-ref-parameter=4, Δr=0.25/
+```
+python3 train.py --prior-hours 24 --time-ref-parameter 1
+```
+
 
 # Results 
 ![](assets/nzamba10.png)
